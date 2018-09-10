@@ -8,6 +8,12 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Riskmonitor</h3>
-
+  <div *ngIf="givenName">
+    <hr>
+    <p>You are logged in as: <b>{{ givenName }}</b></p>
+    <div class="claims">
+      <strong>Claims from Identity Token JWT:</strong>
+      <pre>{{claims | json}}</pre>
+    </div>
+  </div>
 </ion-content>
